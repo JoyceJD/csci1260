@@ -4,7 +4,7 @@
 // Team Members: Austen Boda, Duncan Hayes, Eric Caton,
 //                               Jason Joyce, and Paul Brummitt
 // ******
-// The implementation of Equipment will be written by Austen Boda, Duncan Hayes
+// The implementation of Equipment will be written by Jason Joyce
 
 // A class that establishes equipment functionality
 
@@ -42,25 +42,6 @@ public class Equipment
       return durability;
   }
 
-  public String getDurabilityStatus() //checks durability status of an equipment object and returns a string explaning its condition
-  {
-
-    String conditionStatus;
-
-    if(durability > 0.9)
-        conditionStatus = "Great Condition";
-    else if(durability > 0.75 || durability < 0.9)
-        conditionStatus = "Good Condition";
-    else if(durability > 0.5 || durability < .75)
-        conditionStatus = "Fair Condition";
-    else if(durability > 0.3 || durability < 0.5)
-        conditionStatus = "Poor Condition";
-    else
-        conditionStatus = "Almost Broken";
-
-    return conditionStatus;
-  }
-
   public void setName(String n) //sets name equal to n
   {
       name = n;
@@ -92,6 +73,14 @@ public class Equipment
           else
               durability += d;
       }
+
+
+  }
+
+  
+  public boolean use(Person person)
+  {
+    return true;
   }
 
 
